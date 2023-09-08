@@ -20,17 +20,19 @@ import java.util.List;
 @RequestMapping()
 public class CarController {
 
-    private final CarDao carDao;
+    private final CarDao carDao;//todo: написал ниже...
 
     @Autowired
-    public CarController(CarDao carDao) {
+    public CarController(CarDao carDao) {//todo: написал ниже...
         this.carDao = carDao;
     }
+
+    //todo: контроллер в методе - должен обращаться только к сервису, уже в сервисе - идет обращение к repository-слою, в нашем случае которым является dao
 
     @GetMapping("/cars")
     public String index(Model model, @RequestParam(value = "count", defaultValue = "5") int someCars) {
         CarService carService = new CarService();
-        List<Car> list = new ArrayList<>();
+        List<Car> list = new ArrayList<>();//todo: инициализауия не нужна (IDE подсказывает, подсвечивает серым)
         list = carService.carsCount(carDao.index(), someCars);
         model.addAttribute("cars", list);
         return "cars";

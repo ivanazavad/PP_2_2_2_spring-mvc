@@ -25,5 +25,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
-
 }
+
+
+//todo: намеренно не трогал .gitignore - смотрим, наблюдаем, как в твой репозиторий залились ненужные вещи другого разработчика (я))
