@@ -27,5 +27,3 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     }
 }
 
-
-//todo: намеренно не трогал .gitignore - смотрим, наблюдаем, как в твой репозиторий залились ненужные вещи другого разработчика (я))
