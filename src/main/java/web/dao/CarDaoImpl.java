@@ -24,7 +24,7 @@ public class CarDaoImpl implements CarDao {
         return cars;
     }
 
-    public Car show(int id) {
+    public Car show(Integer id) {
         return cars.stream().filter(car -> car.getId() == id).findAny().orElse(null);
     }
 }

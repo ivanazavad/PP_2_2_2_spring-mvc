@@ -30,4 +30,11 @@ public class CarController {
         model.addAttribute("cars", list);
         return "cars";
     }
+
+    @GetMapping("/one_car")
+    public String show(Model model, @RequestParam(value = "id", defaultValue = "1") Integer id) {
+        Car car = carService.carShow(id);
+        model.addAttribute("cars", car);
+        return "one_car";
+    }
 }

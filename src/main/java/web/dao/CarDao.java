@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CarDao {
 
-    List<Car> index();
+    public List<Car> index();
 
-    Car show(int id);//todo: не используется?
+    public Car show(Integer id);//todo: использовала на странице one_car для поиска модели по id
 }
