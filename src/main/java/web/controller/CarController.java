@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping()
 public class CarController {
 
-    private final CarServiceImpl carService;//todo: написал ниже...
+    private final CarServiceImpl carService;
 
     @Autowired
     public CarController(CarServiceImpl carService) {
@@ -35,5 +35,4 @@ public class CarController {
         model.addAttribute("cars", list);
         return "cars";
     }
-
 }
