@@ -12,8 +12,10 @@ import java.util.stream.Collectors;
 public class CarServiceImpl implements CarService {
 
 
+
+
     public List<Car> carsCount(Integer number) {
-        CarDao carDao = new CarDaoImpl();
+        CarDao carDao = new CarDaoImpl();//todo -> в @Autowired
         List<Car> count = carDao.index();
         if (number == 0 || number > 5) return count;
         return count.stream().limit(number).collect(Collectors.toList());
